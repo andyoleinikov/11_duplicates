@@ -1,7 +1,7 @@
 # Anti-Duplicator
 
 With this script you can find if you have duplicates in specified folder and subfolders.
-You will recieve set of duplicates names and sizes.
+You will recieve files names, sizes and paths.
 
 # Quickstart
 
@@ -11,7 +11,10 @@ Specify the path to the directory when using this script from the command line.
 $ python duplicates.py <path to a directory>
 You are looking for duplicates in <path to a directory>
 You have <amount of> duplicates:
-<file name> <file size>
+File name: <file name>
+File size: <file size>
+Paths:
+<Path to file>
 ```
 
 
@@ -19,16 +22,20 @@ You have <amount of> duplicates:
 
 ```bash
 
-$ python duplicates.py /home
-You are looking for duplicates in /home
-You have 7 duplicates:
-master 41
-3ca6dc5aeb211beeab8e7d3ae5858c9cec1690 163
-__init__.py 276
-axes_rgb.py 387
-Catamarca 1109
-RECORD 2812
-py26compat.py 481
+$ python duplicates.py /test/
+You are looking for duplicates in /test/
+You have 2 duplicates:
+File name: __init__.py
+File size: 0
+Paths:
+/test/env/lib/python3.5/site-packages/pip/operations
+/test/env/lib/python3.5/site-packages/pkg_resources/_vendor
+File name: INSTALLER
+File size: 4
+Paths:
+/test/env/lib/python3.5/site-packages/setuptools-20.7.0.dist-info
+/test/env/lib/python3.5/site-packages/pkg_resources-0.0.0.dist-info
+/test/env/lib/python3.5/site-packages/pip-8.1.1.dist-info
 
 ```
 
