@@ -32,15 +32,13 @@ if __name__ == '__main__':
     if len(sys.argv) < 2:
         sys.exit('No path specified')
     dir_path = sys.argv[1]
-    print('You are looking for duplicates in', dir_path)
-
     if not isdir(dir_path):
         sys.exit('Specified path is not a directory')
-
+    
+    print('You are looking for duplicates in', dir_path)
     duplicates = find_duplicates(dir_path)
 
     if duplicates:
         print_duplicates(duplicates)
-        exit()
-
-    print('No duplicates')
+    else:
+        print('No duplicates')
